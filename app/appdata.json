@@ -1,0 +1,287 @@
+{
+    "accounts": {
+        "1": {
+            "id": 1,
+            "iban": "NL11 RABO 0134 5667 89",
+            "name": "Rabo TotaalRekening",
+            "balance": 1985.74,
+            "type": "betalen",
+            "transfers": [
+                {
+                    "amount": 30,
+                    "name": "Stichting exploitatie Nederlandse Staatsloterij",
+                    "description": "Gefeliciteerd met uw prijs",
+                    "via": "Overschrijving",
+                    "date": "2015-10-12",
+                    "postBalance": 1985.74
+                },
+                {
+                    "amount": -127.81,
+                    "name": "Belastingdienst",
+                    "description": "Wegenbelasting",
+                    "via": "Automatische incasso",
+                    "date": "2015-10-12",
+                    "postBalance": 1955.74
+                },
+                {
+                    "amount": -57.99,
+                    "name": "Nedgame Leiden",
+                    "description": "12:54 pasnr 1234",
+                    "via": "Betaalautomaat",
+                    "date": "2015-10-12",
+                    "postBalance": 2141.54
+                },
+                {
+                    "amount": -14.32,
+                    "name": "JUMBO Leiden",
+                    "description": "18:59 pasnr 1234",
+                    "via": "Betaalautomaat",
+                    "date": "2015-10-10",
+                    "postBalance": 2155.86
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "iban": "NL11 RABO 0134 5667 89",
+            "name": "Rabo InternetSparen",
+            "balance": 12185,
+            "type": "sparen",
+            "transfers": [
+                {
+                    "amount": -500,
+                    "name": "Opname",
+                    "description": "",
+                    "via": "Internetbankieren",
+                    "date": "2015-10-21",
+                    "postBalance": 12185
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-10-20",
+                    "postBalance": 12685
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-09-20",
+                    "postBalance": 12335
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-08-20",
+                    "postBalance": 11985
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-07-20",
+                    "postBalance": 11635
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-06-20",
+                    "postBalance": 11285
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-05-20",
+                    "postBalance": 10935
+                },
+                {
+                    "amount": 350,
+                    "name": "Inleg",
+                    "description": "Maandelijks sparen",
+                    "via": "Geplande opdracht",
+                    "date": "2015-04-20",
+                    "postBalance": 10585
+                },
+                {
+                    "amount": -1450,
+                    "name": "Opname",
+                    "description": "Vakantie",
+                    "via": "Internetbankieren",
+                    "date": "2015-04-16",
+                    "postBalance": 12035
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "iban": "NL45 RABO 0987 6543 21",
+            "name": "Rabo PeriodeSparen",
+            "balance": 7000,
+            "type": "sparen",
+            "transfers": [
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-10-10",
+                    "postBalance": 7000
+                },
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-09-10",
+                    "postBalance": 6850
+                },
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-08-10",
+                    "postBalance": 6700
+                },
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-07-10",
+                    "postBalance": 6550
+                },
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-06-10",
+                    "postBalance": 6400
+                },
+                {
+                    "amount": 150,
+                    "name": "Inleg",
+                    "description": "",
+                    "via": "Geplande opdracht",
+                    "date": "2015-05-10",
+                    "postBalance": 6250
+                }
+            ]
+        }
+    },
+    "cards": [
+        {
+            "id": 1,
+            "name": "RaboCard",
+            "holder": "W. Van Breukelen",
+            "number": "0123456789012345",
+            "masked": "&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;2345",
+            "expiry": "11/17"
+        }
+    ],
+    "messages": {
+        "1": {
+            "id": 1,
+            "read": false,
+            "attachment": true,
+            "date": "2015-10-25",
+            "title": "Uw RaboCard overzicht Oktokber 2015 staat klaar",
+            "content": [
+                "<p class='intro'>Het maandoverzicht van uw RaboCard eindigend op 1589 staat klaar.</p>"
+            ]
+        },
+        "2": {
+            "id": 2,
+            "read": false,
+            "attachment": false,
+            "date": "2015-10-22",
+            "title": "Nieuwe mogelijkheden in de Rabo Bankieren app",
+            "content": [
+                "<p class='intro'>Er zijn nieuwe mogelijkheden toegevoegd in de Rabo Bankieren app.</p>"
+            ]
+        },
+        "3": {
+            "id": 3,
+            "read": true,
+            "attachment": false,
+            "date": "2015-10-21",
+            "title": "Nieuwe functies en verbeteringen",
+            "content": [
+                "<p class='intro'>Nieuwe functies toegevoegd</p>"
+            ]
+        },
+        "4": {
+            "id": 4,
+            "read": true,
+            "attachment": true,
+            "date": "2015-09-25",
+            "title": "Uw RaboCard overzicht September 2015 staat klaar",
+            "content": [
+                "<p class='intro'>Het maandoverzicht van uw RaboCard eindigend op 1589 staat klaar.</p>"
+            ]
+        }
+    },
+    "actueel": {
+        "1": {
+            "id": 1,
+            "title": "De zin en onzin van beleggen",
+            "image": "/img/story-beleggen.jpg",
+            "date": "2015-10-22",
+            "location": "Utrecht",
+            "content": [
+                "<p class='intro'>Beleggen. U wilt wel, maar vindt het ook spannend. Het blijft toch uw spaargeld en dan gaat u liever niet over een nacht ijs. Wat is verstandig en wat juist niet? Om antwoord te krijgen op uw vragen, organiseren wij door heel Nederland bijeenkomsten 'Beginnen met beleggen'. Hierin leert u over de zin en onzin van beleggen. Aan de  hand van prikkelende stellingen worden beleggingsdrempels zoals risico’s, kosten, complexiteit en beleggingshorizon interactief behandeld. Zo kunt u zelf bepalen of beleggen iets voor u is.</p>",
+                "<h4>Schrijf u snel in voor een bijeenkomst bij u in de buurt</h4>",
+                "<p>Per bijeenkomst is er een maximaal aantal plaatsen beschikbaar. Schrijf u daarom snel in. Wij heten u graag van harte welkom.</p>"
+            ]
+        },
+        "2": {
+            "id": 2,
+            "title": "Stuur uw bankpas niet op",
+            "image": "/img/story-bankpas.png",
+            "date": "2015-10-21",
+            "location": "Utrecht",
+            "content": [
+                "<p class='intro'>Er zijn nieuwe valse e-mails in omloop over het aanvragen van een nieuwe bankpas. Uw eigen bankpas zou niet meer veilig zijn, omdat er 'bankpasfraudeurs' in uw omgeving actief zijn. U moet vervolgens snel een nieuwe pas aanvragen en uw eigen bankpas opsturen. Dit verhaal is echter niet waar. Klik dus niet op de link en stuur uw bankpas niet op.</p>",
+                "<h4>Oplichting</h4>",
+                "<p>Dit is een vorm van internetoplichting. De e-mails zijn niet afkomstig van de Rabobank, maar worden gemaakt door criminelen. Zij proberen zo uw bankpas en pincode in handen te krijgen.</p>",
+                "<h4>Wilt of moet u een bankpas inleveren?</h4>",
+                "<p>Knip de bankpas dan in minimaal twee stukken. Zorg dat zowel de magneetstrip als de chip stuk zijn.</p>"
+            ]
+        },
+        "3": {
+            "id": 3,
+            "title": "Nieuw hypotheektarief",
+            "image": "/img/story-hypotheektarief.jpg",
+            "date": "2015-10-09",
+            "location": "Utrecht",
+            "content": [
+                "<p class='intro'>De vaste hypotheekrente voor de Annuïteitenhypotheek en de Lineaire Hypotheek is per 1 oktober verlaagd. De hypotheekrente voor langere looptijden is aantrekkelijker geworden. Bekijk de algemene actuele hypotheekrentetarieven of maak een Rabobank Hypotheekdossier aan om na te gaan welke hypotheekrente voor u geldt.</p>",
+                "<h4>Herstellende huizenmarkt</h4>",
+                "<p>De huizenmarkt laat een herstel zien en de vraag naar de Annuïteitenhypotheek en Lineaire Hypotheek is toegenomen. Op deze ontwikkeling speelt de Rabobank in. Door de toenemende vraag kunnen we ons tarief aanpassen. De voorwaarden van de Annuïteitenhypotheek en Lineaire Hypotheken blijven hetzelfde, alleen het tarief is aangepast.</p>",
+                "<h5>Toelichting hypotheekrente</h5>",
+                "<p>Wat u aan maandlasten betaalt, hangt onder andere af van de hoogte van uw hypothecaire financiering en de gekozen looptijd. In het rekenvoorbeeld ziet u hoeveel u moet betalen bij een annuïtaire lening van € 250.000 met een looptijd van 30 jaar en een rente van 2,3% voor 10 jaar vast (met NHG). Vóór de afloop van de rentevaste periode krijgt u van de bank een aanbod voor de volgende rentevaste periode. U kunt dan een keuze maken uit de door de bank dan aangeboden rentetypes tegen het dan geldende rentetarief. Dat tarief kan hoger of lager zijn dan het nu geldende rentetarief. Als zekerheid voor de bank dient u hypotheek te vestigen op uw woning. Voor deze woning moet u verplicht een opstalverzekering afsluiten. Daarnaast is het afhankelijk van de gekozen hypothecaire financiering of u, om hiervoor in aanmerking te komen, een overlijdensrisicoverzekering moet afsluiten.</p>"
+            ]
+        },
+        "4": {
+            "id": 4,
+            "title": "Prinsjesdag 2015: Gevolgen voor u en uw portemonnee",
+            "image": "/img/story-prinsjesdag.jpg",
+            "date": "2015-09-16",
+            "location": "Utrecht",
+            "content": [
+                "<p class='intro'>Op 15 september 2015 zijn de Miljoenennota en het Belastingplan voor 2016 verschenen. Mogelijk zijn de aangekondigde veranderingen van invloed op uw situatie. Daarom nemen wij graag een aantal maatregelen met u door."
+            ]
+        }
+    }
+}

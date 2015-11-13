@@ -1,0 +1,140 @@
+<ons-navigator modifier="material" class="bg-white">
+    <ons-page class="bg-gray">
+        <article data-role="page" id="overzicht" class="bg-gray">
+            <form id="frm-overboeking" onsubmit="alert('Uiteraard werkt dit niet'); return false;" autocomplete="off">
+                <header data-role="header" class="bg-brand header-fixed with-tabs">
+                    <ons-toolbar class="account-overview-header account-carousel-container" modifier="material">
+                        <div class="center account-header">
+                            <div id="account-carousel" class="account-carousel tab-slider tab-slider-accounts bg-blue">
+                                <ons-carousel var="accountCarousel" ng-show="true" swipeable intial-index="{{ rekeningSelected - 1 }}" item-width="75%" overscrollable auto-scroll auto-scroll-ratio=".5" class="">
+                                    <ons-carousel-item ng-class="{active: rekeningSelected==rekening.id}" ng-repeat="rekening in rekeningen" style="">
+                                        <a href="#/rekeningen/{{rekening.id}}" onclick="return false;">
+                                            <span class="account-balance">{{ rekening.balance | currencyFormat:true }}</span>
+                                            <span class="account-name fg-blue">{{ rekening.name }}</span>
+                                            <span class="account-iban">{{ rekening.iban }}</span>
+                                        </a>
+                                    </ons-carousel-item>
+                                    <ons-carousel-item style="padding: 0 1em; box-sizing: border-box; width: 25%;">
+                                        &nbsp;
+                                    </ons-carousel-item>
+                                </ons-carousel>
+                            </div>
+                        </div>
+                    </ons-toolbar>
+                </header>
+                <div role="main" class="ui-content bg-white">
+                    <div class="form-inline">
+                        <div class="form-group fg-float">
+                            <div class="fg-line">
+                                <!--<span class="currency-sign" onclick="document.getElementById('overboeking-bedrag-euro').focus();">&euro;</span>-->
+                                <input type="number" id="overboeking-bedrag-euro" placeholder="0" class="form-control fg-input text-right auto-clear" pattern="[0-9]+" value="" size="7">
+                            </div>
+                            <label class="fg-label">Bedrag</label>
+                        </div>
+                        <div class="form-group fg-float">
+                            <div class="fg-line">
+                                <input type="number" id="overboeking-bedrag-cent" placeholder="00" class="form-control fg-input text-center auto-clear" pattern="[0-9]+" value="" size="2" maxlength="2">
+                            </div>
+                            <label class="fg-label">cent</label>
+                        </div>
+                    </div>
+                    <div class="input-group m-b-20 fg-float">
+                        <div class="fg-line" style="padding-left:0;">
+                            <input type="text" id="overboeking-naam" class="form-control fg-input" placeholder="Naam begunstigde" autocomplete="off">
+                        </div>
+                        <label class="fg-label">Naam begunstigde</label>
+                        <span class="input-group-addon" style="padding: 0; vertical-align: middle;">
+                            <a id="address-book" ng-click="modalAddressBook.show()" aria-label="Adresboek"><i class="zmdi zmdi-assignment-account"></i></a>
+                        </span>
+                    </div>
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="text" id="overboeking-iban" class="form-control fg-input" placeholder="Rekeningnummer (IBAN) begunstigde" aria-label="Rekeningnummer (IBAN) begunstigde">
+                        </div>
+                        <label class="fg-label">Rekeningnummer (IBAN)</label>
+                    </div>
+                    <div class="form-group fg-float">
+                        <div class="fg-line" ng-click="modalOmschrijving.show()">
+                            <input type="text" class=" form-control fg-input" id="overboeking-omschrijving" placeholder="Omschrijving of betalingskenmerk" aria-label="Omschrijving of betalingskenmerk">
+                        </div>
+                        <label class="fg-label">Omschrijving of betalingskenmerk</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="fg-line">
+                            <select id="overboeking-opties" class="form-control fg-input">
+                                <option value="1">Vandaag, eenmalig</option>
+                            </select>
+                        </div>
+                        <label class="fg-label" for="overboeking-opties">Extra opties</label>
+                    </div>
+                    <div class="form-group form-footer text-right">
+                        <button type="submit" id="overboeking-submit" class="btn-submit btn-brand" aria-label="Volgende">Volgende</button>
+                    </div>
+                </div>
+            </form>
+        </article>
+    </ons-page>
+</ons-navigator>
+
+<ons-modal var="modalOmschrijving" modifier="material">
+    <div role="dialog" id="popup-omschrijving">
+        <header class="bg-brand fg-white">
+            <h3 class="ui-title-inline">Omschrijving of betalingskenmerk</h3>
+        </header>
+        <div>
+            <ons-scroller>
+                <form id="frm-omschrijving">
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="text" id="frm-omschrijving-omschrijving" class="form-control fg-input" placeholder="Omschrijving" aria-label="Omschrijving" maxlength="140">
+                        </div>
+                        <label class="fg-label" for="frm-omschrijving-omschrijving">Omschrijving</label>
+                        <div class="text-right" id="omschrijving-count">0 / 140</div>
+                    </div>
+                    <div class="form-group fg-float">
+                        <div class="fg-line">
+                            <input type="text" id="frm-omschrijving-kenmerk" class="form-control fg-input" placeholder="Betalingskenmerk acceptgiro" aria-label="Betalingskenmerk acceptgiro" maxlength="140">
+                        </div>
+                        <label class="fg-label" for="frm-omschrijving-kenmerk">Betalingskenmerk acceptgiro</label>
+                    </div>
+                    <div class="form-group text-right">
+                        <a class="fg-brand popup-btn" modifier="material" data-rel="cancel">Annuleren</a>
+                        <a class="fg-brand popup-btn" modifier="material" data-rel="ok">OK</a>
+                    </div>
+                </form>
+            </ons-scroller>
+        </div>
+    </div>
+</ons-modal>
+
+<ons-modal var="modalAddressBook">
+    <div role="dialog" id="popup-address-book">
+        <header class="bg-brand fg-white">
+            <h3 class="ui-title-inline">Adresboek</h3>
+        </header>
+        <div>
+            <ons-scroller>
+                <ul id="address-book-list" class="list">
+                    <li class="address-book-index">
+                        <a id="address-book-b">B</a>
+                    </li>
+                    <li>
+                        <a class="address-book-selectable">
+                            <span class="address-book-name">Belastingdienst te Apeldoorn</span>
+                            <span class="address-book-iban">NL86 INGB 0002 4455 88</span>
+                        </a>
+                    </li>
+                    <li class="address-book-index">
+                        <a id="address-book-c">C</a>
+                    </li>
+                    <li>
+                        <a class="address-book-selectable">
+                            <span class="address-book-name">Centraal Justitieel Incassobureau te Leeuwarden</span>
+                            <span class="address-book-iban">NL28 RBOS 0569 9888 88</span>
+                        </a>
+                    </li>
+                </ul>
+            </ons-scroller>
+        </div>
+    </div>
+</ons-modal>

@@ -1,0 +1,62 @@
+<ons-page>
+    <article data-role="page" id="login" class="bg-gray">
+        <div role="main" class="ui-content">
+            <div class="faux-header bg-village">
+                <h1 class="brand">Rabobank</h1>
+
+                <h2>Inloggen</h2>
+
+                <div id="login-ui" class="ui-block ui-white">
+                    <a id="person-add" onclick="return false;"><span class="ui-icon icon-person-add"></span></a>
+
+                    <h3 class="fg-brand text-center">
+                        <span class="ui-icon icon-bold-person"></span>
+                        Wesley van Breukelen
+                    </h3>
+
+                    <p>Toegangscode</p>
+
+                    <form method="post" id="login-form" autocomplete="off" rb-login="">
+                        <div class="pin-container">
+                            <input type="text" id="pinInput" name="pinInput" pattern="[0-9]{5}" maxlength="5" size="5" autocomplete="off"/>
+                            <label for="pinInput" class="masks empty" id="pinMasks">
+                                <span class="mask"></span><span class="mask"></span><span class="mask"></span><span class="mask"></span><span class="mask"></span>
+                            </label>
+                        </div>
+                        <!--<input type="password" placeholder="*****" class="text-center" pattern="[0-9]{5}">-->
+                        <input type="submit" id="login-form-submit" data-enhance="false" data-role="none" class="hidden" value="log in">
+                    </form>
+                    <p><a href="#/login" onclick="return false;">Toegangscode vergeten</a></p>
+                </div>
+            </div>
+            <div class="ui-green ui-block">
+                <h3>
+                    <span class="ui-icon icon-actual"></span>
+                    Actueel
+                </h3>
+
+                <div class="actual-story actual-mini">
+                    <h3>De zin en onzin van beleggen</h3>
+
+                    <p class="story-intro">
+                        Beleggen. U wilt wel, maar vindt het ook spannend. Het blijft toch uw spaargeld en dan gaat u liever niet over
+                        een nacht ijs. Wat is verstandig en wat juist niet? Om antwoord te krijgen op uw vragen, organiseren wij door
+                        heel Nederland bijeenkomsten 'Beginnen met beleggen'. Hierin leert u over de zin en onzin van beleggen. Aan de
+                        hand van prikkelende stellingen worden beleggingsdrempels zoals risico’s, kosten, complexiteit en
+                        beleggingshorizon interactief behandeld. Zo kunt u zelf bepalen of beleggen iets voor u is.
+                    </p>
+                </div>
+                <div class="actual-story actual-mini">
+                    <h3>Stuur uw bankpas niet op</h3>
+
+                    <p class="story-intro">
+                        Er zijn nieuwe valse e-mails in omloop over het aanvragen van een nieuwe bankpas. Uw eigen bankpas zou niet meer
+                        veilig zijn, omdat er 'bankpasfraudeurs' in uw omgeving actief zijn. U moet vervolgens snel een nieuwe pas
+                        aanvragen en uw eigen bankpas opsturen. Dit verhaal is echter niet waar. Klik dus niet op de link en stuur uw
+                        bankpas niet op.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+</ons-page>

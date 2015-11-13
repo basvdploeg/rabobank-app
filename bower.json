@@ -1,0 +1,15 @@
+{
+  "name": "rabobank-app",
+  "description": "Mockup van de Rabobank app volgens Material Design",
+  "version": "1.0.0",
+  "homepage": "https://github.com/omines/rabobank-app",
+  "license": "GPL-2.0",
+  "private": false,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-route": "1.4.x",
+    "jquery": "2.1.x",
+    "onsenui": "1.3.x"
+  }
+}

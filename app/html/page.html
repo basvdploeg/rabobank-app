@@ -1,0 +1,13 @@
+<ons-page>
+    <ons-toolbar modifier="material">
+        <div class="left">
+            <ons-toolbar-button modifier="material" ng-click="menu.toggleMenu()">
+                <ons-icon icon="fa-bars"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">Rabobank</div>
+    </ons-toolbar>
+
+    <ons-split-view var="splitViewRekeningen" secondary-page="html/rekeningen.html" main-page="html/rekening-detail.html" main-page-width="70%" collapse="portrait">
+    </ons-split-view>
+</ons-page>

@@ -1,0 +1,90 @@
+<ons-page class="bg-gray">
+    <ons-toolbar modifier="material">
+        <div class="left">
+            <ons-toolbar-button modifier="material" ng-click="menu.toggleMenu()">
+                <ons-icon icon="fa-bars"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">Rabobank</div>
+    </ons-toolbar>
+    <article data-role="page" id="overzicht" class="bg-gray">
+        <div role="main" class="ui-columns ui-content">
+            <div class="ui-block-wrap">
+                <div class="ui-blue ui-block">
+                    <h3 class="fw-light">
+                        <span class="ui-icon ui-icon-cash-wallet"></span>
+                        Rekeningen
+                    </h3>
+                    <ul class="accounts-list">
+                        <li ng-repeat="rekening in rekeningen" class="account-list-item" ng-if="rekening.type == 'betalen'" ng-click="navigateTo('/rekeningen/'+ rekening.id)">
+                            <span class="account-balance">&euro;{{ rekening.balance | currencyFormat }}</span>
+                            <span class="account-name">{{ rekening.name }}</span>
+                            <span class="account-no block">{{ rekening.iban }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-block-wrap">
+                <div class="ui-light ui-block">
+                    <h3 class="fw-light fg-brand">
+                        <span class="ui-icon ui-icon-cash-piggy"></span>
+                        Spaar rekeningen
+                    </h3>
+                    <ul class="accounts-list">
+                        <li ng-repeat="rekening in rekeningen" class="account-list-item" ng-if="rekening.type == 'sparen'" ng-click="navigateTo('/rekeningen/'+ rekening.id)">
+                            <span class="account-balance">&euro;{{ rekening.balance | currencyFormat }}</span>
+                            <span class="account-name">{{ rekening.name }}</span>
+                            <span class="account-no block">{{ rekening.iban }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-block-wrap">
+                <div class="ui-light ui-block">
+                    <h3 class="fw-light fg-brand">
+                        <span class="ui-icon ui-icon-credit-card"></span>
+                        Creditcards
+                    </h3>
+                    <ul class="accounts-list">
+                        <li ng-repeat="card in creditCards">
+                            <span class="account-name block fg-blue">{{ card.name }}</span>
+                            <span class="account-subtext block">{{ card.holder }}</span>
+                            <span class="account-no block">NL&bullet;&bullet; RABO &bullet;&bullet;&bullet;&bullet;&bullet;&bullet;&bullet; 4321</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-block-wrap">
+                <div class="ui-light ui-block">
+                    <h3 class="fw-light fg-brand">
+                        <span class="ui-icon icon-bold-mail"></span>
+                        Berichten (1)
+                    </h3>
+                    <ul class="messages-list">
+                        <li data-target="#messages" class="message with-attachment" ng-click="navigateTo('/berichten/4')">
+                            <span class="message-title block fg-blue">Overzicht RaboCard September 2015 staat klaar</span>
+                            <span class="message-date block">Woensdag 23 September 2015</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-block-wrap">
+                <div class="ui-green ui-block">
+                    <h3 class="fg-white">
+                        <a href="#actueel">
+                            <span class="ui-icon ui-icon-actual"></span>
+                            Actueel
+                        </a>
+                    </h3>
+
+                    <div class="actual-story actual-mini" ng-repeat="actueel in actueleBerichten" ng-click="navigateTo('/actueel/' + actueel.id)">
+                        <h3>{{ actueel.title }}</h3>
+                        <img src="{{ actueel.image }}">
+                        <p class="intro" ng-bind-html="actueel.content"></p>
+                        <p class="text-right"><a href="#/actueel/{{ actueel.id }}">lees meer &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</ons-page>

@@ -1,0 +1,47 @@
+    <ons-page>
+        <ons-toolbar modifier="material">
+            <div class="left">
+                <ons-toolbar-button modifier="material" ng-click="menu.toggleMenu()">
+                    <ons-icon icon="fa-bars"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div modifier="material" class="center">Rabobank</div>
+        </ons-toolbar>
+
+        <ons-split-view var="berichtenSplitView" modifier="material" secondary-page="berichten-list.html" main-page="berichten-view.html" main-page-width="70%" collapse="portrait">
+        </ons-split-view>
+    </ons-page>
+
+    <ons-template id="berichten-view.html">
+        <ons-page modifier="material" class="bg-gray user-message">
+            <ons-toolbar modifier="material" class="bg-blue">
+                <div class="left">
+                    <ons-toolbar-button modifier="material" ng-click="toggleSplitView(berichtenSplitView)">
+                        <ons-icon icon="fa-arrow-left"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Berichten</div>
+            </ons-toolbar>
+            <article class="ui-content ui-block message-view">
+                <header>
+                    <h1>{{ actiefBericht.title }}</h1>
+
+                    <p class="meta">
+                        {{ actiefBericht.date }}
+                    </p>
+                </header>
+                <div class="message-content" ng-bind-html="actiefBericht.content"></div>
+            </article>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="berichten-list.html">
+        <ons-page modifier="material" class="bg-white sidebar-list">
+            <ons-list class="messages-list">
+                <ons-list-item ng-repeat="bericht in berichten" class="message" ng-class="{active: berichtSelected==bericht.id}" modifier="tappable modern" ng-click="navigateTo('/berichten/'+bericht.id)">
+                    <span class="message-title block fg-blue">{{bericht.title}}</span>
+                    <span class="message-date block">{{bericht.date}}</span>
+                </ons-list-item>
+            </ons-list>
+        </ons-page>
+    </ons-template>

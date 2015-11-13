@@ -1,0 +1,57 @@
+    <ons-page modifier="material" class="bg-white" id="transfer-list-page">
+        <ons-toolbar class="account-overview-header account-carousel-container" modifier="material">
+            <div class="center account-header">
+                <div id="account-carousel" class="account-carousel tab-slider tab-slider-accounts bg-blue">
+                    <ons-carousel var="accountCarousel" ng-show="true" swipeable intial-index="{{ rekeningSelected - 1 }}" item-width="75%" overscrollable auto-scroll auto-scroll-ratio=".5" class="">
+                        <ons-carousel-item ng-class="{active: rekeningSelected==rekening.id}" ng-repeat="rekening in rekeningen" style="">
+                            <a href="#/rekeningen/{{rekening.id}}">
+                                <span class="account-balance">{{ rekening.balance | currencyFormat:true }}</span>
+                                <span class="account-name fg-blue">{{ rekening.name }}</span>
+                                <span class="account-iban">{{ rekening.iban }}</span>
+                            </a>
+                        </ons-carousel-item>
+                        <ons-carousel-item style="padding: 0 1em; box-sizing: border-box; width: 25%;">
+                            &nbsp;
+                        </ons-carousel-item>
+                    </ons-carousel>
+                </div>
+            </div>
+        </ons-toolbar>
+        <ol class="list list-transfers">
+            <li ng-repeat="transfer in accountTransfers" class="{{ transfer.classList }}">
+                <span ng-if="transfer.isDateRow">{{ transfer.date | writeDutchDate }}</span>
+                <div  ng-if="!transfer.isDateRow" class="transfer-glance">
+                    <span class="transfer-direction"></span>
+                    <span class="transfer-name">{{ transfer.name }}</span>
+                    <span class="transfer-amount">{{ transfer.amount | currencyFormat:true }}</span>
+                </div>
+                <div ng-if="!transfer.isDateRow" class="transfer-details">
+                    <div class="transfer-detail-col">
+                        <div class="transfer-detail-item">
+                            <span>Omschrijving</span>
+                            {{ transfer.description }}
+                        </div>
+                        <div class="transfer-detail-item">
+                            <span>Rentedatum</span>
+                            {{ transfer.date | reverseDate }}
+                        </div>
+                        <div class="transfer-detail-item">
+                            <span>Saldo na boeking</span>
+                            {{ transfer.postBalance | currencyFormat:true }}
+                        </div>
+                    </div>
+                    <div class="transfer-detail-col">
+                        <div class="transfer-detail-item">
+                            <span>Via</span>
+                            {{ transfer.via }}
+                        </div>
+                        <div class="transfer-detail-item">
+                            <span>Verwerkingsdatum</span>
+                            {{ transfer.date | reverseDate }}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <a class="btn-new-transfer" href="#/rekeningen/overboeking/{{rekeningSelected}}"><span class="ui-icon ui-icon-cash-wallet"></span></a>
+    </ons-page>

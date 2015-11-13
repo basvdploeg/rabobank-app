@@ -1,0 +1,46 @@
+    <ons-page>
+        <ons-toolbar modifier="material">
+            <div class="left">
+                <ons-toolbar-button modifier="material" ng-click="menu.toggleMenu()">
+                    <ons-icon icon="fa-bars"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">Rabobank</div>
+        </ons-toolbar>
+
+        <ons-split-view var="splitView" secondary-page="actueel-list.html" main-page="actueel-view.html" main-page-width="70%" collapse="width 961px">
+        </ons-split-view>
+    </ons-page>
+
+    <ons-template id="actueel-view.html">
+        <ons-page modifier="material" class="bg-green">
+            <ons-toolbar modifier="material" class="bg-green">
+                <div class="left">
+                    <ons-toolbar-button modifier="material" ng-click="toggleSplitView(splitView)">
+                        <ons-icon icon="fa-arrow-left"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Actueel</div>
+            </ons-toolbar>
+            <article class="actual-story-large actual-story">
+                <header class="story-image" style="background-image: url('{{actiefBericht.image}}')">
+                    <h1>{{actiefBericht.title}}</h1>
+                </header>
+                <div class="story-text ui-content">
+                    <div class="message-content" ng-bind-html="actiefBericht.content"></div>
+                    <p class="story-date">{{actiefBericht.location}}, {{actiefBericht.date}}</p>
+                </div>
+            </article>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="actueel-list.html">
+        <ons-page modifier="material" class="bg-white sidebar-list">
+            <ons-list class="messages-list messages-actueel">
+                <ons-list-item ng-repeat="bericht in actueelBerichten" class="message" ng-class="{active: berichtSelected==bericht.id}" modifier="tappable modern" ng-click="navigateTo('/actueel/'+bericht.id)">
+                    <span class="message-title block fg-blue">{{bericht.title}}</span>
+                    <span class="message-date block">{{bericht.date}}</span>
+                </ons-list-item>
+            </ons-list>
+        </ons-page>
+    </ons-template>

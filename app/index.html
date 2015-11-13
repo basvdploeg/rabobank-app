@@ -1,1 +1,32 @@
-App hier.
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/onsenui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/onsen-css-components.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.rabobank.nl/static/generic/font/myriad/default.css" />
+    <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" href="css/onsen.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,500,700,700italic,500italic' rel='stylesheet' type='text/css'>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <!--<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+    <script src="bower_components/onsenui/js/onsenui.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<ons-navigator var="raboNavigator">
+    <ons-sliding-menu var="menu" modifier="material" main-page="dynamic.html" menu-page="html/menu.html" max-slide-distance="300px" type="reveal" side="left"></ons-sliding-menu>
+</ons-navigator>
+<ons-template id="dynamic.html">
+    <ons-navigator>
+        <ons-page>
+            <div ng-view>Loading...</div>
+        </ons-page>
+    </ons-navigator>
+</ons-template>
+</body>
+</html>

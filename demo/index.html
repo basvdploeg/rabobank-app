@@ -1,19 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Rabobank App - Material Design</title>
-    <style>
+    <meta charset="UTF-8">
+    <title>Rabo Bankieren App concept</title>
+    <link rel="stylesheet" href="https://www.rabobank.nl/static/generic/font/myriad/default.css" />
+    <style type="text/css">
+        html,body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            font-family: "Myriad Regular", sans-serif;
+            white-space:nowrap;
+        }
+        .ipad.portrait iframe {
+            height: 1024px;
+            width: 768px;
+        }
+        .ipad.landscape iframe {
+            width: 1024px;
+            height: 768px;
+        }
+        .ipad.portrait #frame-border {
+            background-image: url(/img/ipad.jpg);
+            background-size: auto 1223px;
+        }
+        .ipad.landscape #frame-border {
+            background-image: url(/img/ipad-landscape.jpg);
+            background-size: 1223px auto;
+        }
+        .iphone6.portrait iframe {
+            height: 627px;
+            width: 375px;
+        }
+        .iphone6.landscape iframe {
+            width: 627px;
+            height: 375px;
+        }
+        .galaxys5.portrait iframe {
+            height: 640px;
+            width: 360px;
+        }
+        .galaxys5.landscape iframe {
+            width: 640px;
+            height: 360px;
+        }
+        #frame-border {
+            background: no-repeat center;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
         iframe {
-            border:10px solid #ccc;
-            box-sizing:content-box;
-            display:block;
-            width:360px;
-            height:640px;
-            margin:5vh auto;
+            border: 0;
+            height: 768px;
+            width: 1024px;
+        }
+        nav {
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            display: inline-block;
+            padding: .5em 1em;
+            margin: 0 0.5em;
+        }
+        @media only screen and (max-device-width:1025px) {
+            nav { display: none; }
+            #frame-border {
+                margin: auto;
+                padding: 0;
+                background: none;
+            }
+        }
+        /* iPad 3 and 4 Landscape */
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            /*body, #frame-border, iframe { height: 768px; width: 1024px; }*/
+            body, #frame-border, iframe { height: 100vh; width: 100vw; }
         }
     </style>
 </head>
 <body>
-    <iframe src="../app/index.html"></iframe>
+<nav>
+    <a href="#" data-view="ipad" data-orientation="portrait">iPad (portrait)</a>
+    <a href="#" data-view="ipad" data-orientation="landscape">iPad (landscape)</a>
+    <a href="#" data-view="iphone6" data-orientation="portrait">iPhone 6 (portrait)</a>
+    <a href="#" data-view="iphone6" data-orientation="landscape">iPhone 6 (landscape)</a>
+    <a href="#" data-view="galaxys5" data-orientation="portrait">Galaxy S4 (portrait)</a>
+    <a href="#" data-view="galaxys5" data-orientation="landscape">Galaxy S4 (landscape)</a>
+</nav>
+<div id="frame-border"><iframe src="/app/" seamless></iframe></div>
+<script>
+    (function(){
+        var a = document.getElementsByTagName('a');
+        for (var i=0;i<a.length;i++)
+            a[i].addEventListener('click', function(event) {
+                if (event.target.hasAttribute('data-view')) {
+                    document.body.className = event.target.getAttribute('data-view') + ' ' + event.target.getAttribute('data-orientation');
+                }
+            })
+    })();
+</script>
 </body>
 </html>

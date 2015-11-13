@@ -1,0 +1,9 @@
+    <ons-page modifier="material" class="bg-white sidebar-list">
+        <ons-list modifier="material" class="accounts-list">
+            <ons-list-item ng-repeat="rekening in rekeningen" modifier="material" ng-class="{active: rekeningSelected==rekening.id}" class="list__item__line-height account-list-item" ng-click="navigateTo('/rekeningen/'+isOverboeking+ rekening.id)">
+                <span class="account-balance">&euro;{{ rekening.balance | currencyFormat }}</span>
+                <span class="account-name">{{ rekening.name }}</span>
+                <span class="account-iban">{{ rekening.iban }}</span>
+            </ons-list-item>
+        </ons-list>
+    </ons-page>

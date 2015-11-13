@@ -1,0 +1,12 @@
+    <ons-carousel modifier="material" swipeable initial-index="0" item-width="75%" overscrollable auto-scroll auto-scroll-ratio=".5" class="">
+        <ons-carousel-item ng-class="{active: rekeningSelected==rekening.id}" ng-repeat="rekening in rekeningen" style="">
+            <a href="#/rekeningen/{{rekening.id}}">
+                <span class="account-balance">&euro;{{ rekening.balance | currencyFormat }}</span>
+                <span class="account-name fg-blue">{{ rekening.name }}</span>
+                <span class="account-iban">{{ rekening.iban }}</span>
+            </a>
+        </ons-carousel-item>
+        <ons-carousel-item style="padding: 0 1em; box-sizing: border-box; width: 25%;">
+            &nbsp;
+        </ons-carousel-item>
+    </ons-carousel>

@@ -1,0 +1,29 @@
+<div id="rabo-menu">
+    <header class="menu-header bg-village">
+        <span class="ui-icon icon-person"></span>
+        <h1>Wesley van Breukelen</h1>
+        <a href="#profiel" class="fg-brand" onclick="return false;">Profiel wijzigen</a>
+    </header>
+    <ons-list>
+        <ons-list-item icon="fa-home" modifier="tappable modern" ng-click="navigateTo('/overzicht')">
+            Rekeningoverzicht
+        </ons-list-item>
+        <ons-list-item modifier="modern" ng-click="navigateTo('/berichten')">
+            Berichten
+            <span class="notification menu-notification">1</span>
+        </ons-list-item>
+        <ons-list-item modifier="modern" ng-click="navigateTo('/actueel')">
+            Actueel
+        </ons-list-item>
+        <ons-list-item modifier="modern" ng-click="navigateTo('/contact')">
+            Feedback
+        </ons-list-item>
+        <ons-list-item modifier="modern" ng-click="navigateTo('/info')">
+            Info
+        </ons-list-item>
+        <ons-list-item modifier="modern" ng-click="navigateTo('/login')" id="logout">
+            Uitloggen
+        </ons-list-item>
+    </ons-list>
+
+</div>

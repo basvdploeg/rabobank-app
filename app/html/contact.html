@@ -1,0 +1,141 @@
+<ons-navigator class="bg-white">
+    <ons-toolbar modifier="material" class="with-tabs">
+        <div class="left">
+            <ons-toolbar-button modifier="material" ng-click="menu.toggleMenu()">
+                <ons-icon icon="fa-bars"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">
+            Rabobank
+
+            <ul class="header-tabs" id="contact-tabs">
+                <li><a href="#/contact/chat" data-tab="chat" ng-class="{active: section=='chat'}">Chat</a></li>
+                <li><a href="#/contact/bellen" data-tab="bellen" ng-class="{active: section=='bellen'}">Bellen</a></li>
+                <li><a href="#/contact/email" data-tab="email" ng-class="{active: section=='email'}">Email</a></li>
+                <li><a href="#/contact/vestiging" data-tab="vestiging" ng-class="{active: section=='vestiging'}">Vestiging</a></li>
+            </ul>
+        </div>
+    </ons-toolbar>
+
+    <div id="contact-split">
+        <ons-page id="contact-chat" class="bg-gray" ng-class="{hidden: section!='chat'}">
+            <div class="chat-messages">
+                <ol>
+                    <li class="chat-message chat-message-received">
+                        <div class="chat-message-body">
+                            Goedemorgen, mijn naam is Amy. Waarmee kan ik u helpen?
+                        </div>
+                        <div class="chat-message-meta">
+                            <time>9:58</time> -
+                            <span class="chat-message-author">Amy</span>
+                            <span class="chat-message-author-location">(Leiden Katwijk)</span>
+                        </div>
+                    </li>
+                    <li class="chat-message chat-message-sent">
+                        <div class="chat-message-body">
+                            Hallo, ik heb een vraag over mijn creditcard.
+                        </div>
+                        <div class="chat-message-meta">
+                            <time>10:01</time> -
+                            <span class="chat-message-author">Wesley</span>
+                        </div>
+                    </li>
+                    <li id="chat-messages-warning">
+                        In deze chat vragen wij u nooit naar beveiligingscodes zoals de inlogcode, signeercode of uw pincode
+                    </li>
+                </ol>
+            </div>
+            <form id="chat-send">
+                <div class="chat-message-input" contenteditable="true" placeholder="Stel uw vraag..."></div>
+                <input type="hidden" data-source="#chat-message-input" name="chat-message-input" id="chat-message-form-input" value="">
+                <a class="chat-message-submit">&nbsp;</a>
+            </form>
+        </ons-page>
+        <ons-page id="contact-bellen" class="bg-white" ng-class="{hidden: section!='bellen'}">
+            <div class="flavor">&nbsp;</div>
+            <ons-list class="list list-call">
+                <ons-list-item icon="fa-phone">
+                    <a href="tel:+31717006000">
+                        <span class="call-name">Bel uw eigen Rabobank</span>
+                        <span class="call-number">+31 (0)71 700 60 00</span>
+                    </a>
+                </ons-list-item>
+                <ons-list-item>
+                    <a href="tel:+31887226767">
+                        <span class="call-name">Rabo Interhelp</span>
+                        <span class="call-number">+31 (0)88 722 67 67</span>
+                    </a>
+                </ons-list-item>
+                <ons-list-item>
+                    <a href="tel:+31135801234">
+                        <span class="call-name">Schade melden Interpolis</span>
+                        <span class="call-number">+31 (0)13 580 12 34</span>
+                    </a>
+                </ons-list-item>
+                <ons-list-item>
+                    <a href="tel:+31302313131">
+                        <span class="call-name">Rabo Beleggingslijn</span>
+                        <span class="call-number">+31 (0)30 231 31 31</span>
+                    </a>
+                </ons-list-item>
+                <ons-list-item>
+                    <a href="tel:+31887226622">
+                        <span class="call-name">Rabo Mobiel en Internetbankieren</span>
+                        <span class="call-number">+31 (0)88 722 66 22</span>
+                    </a>
+                </ons-list-item>
+            </ons-list>
+        </ons-page>
+        <ons-page class="bg-white" id="contact-email" ng-class="{hidden: section!='email'}">
+            <form class="">
+                <h3 class="fg-brand">Stel een vraag</h3>
+
+                <div class="form-group">
+                    <label class="fg-label" for="question-type">Ik heb een vraag over</label>
+                    <div class="fg-line">
+                        <select id="question-type" class="form-control fg-input">
+                            <option>Maak een keuze</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group fg-float">
+                    <div class="fg-line">
+                        <input id="question-text" name="question-text" class="form-control fg-input input-lg" placeholder="Mijn vraag is">
+                    </div>
+                    <label class="fg-label" for="question-text">Mijn vraag is</label>
+                    <input type="hidden" data-source="#question-text" name="question-text" id="question-text-input" value="">
+                </div>
+                <h3 class="fg-brand">Mijn gegevens</h3>
+
+                <div class="form-group fg-float">
+                    <div class="fg-line fg-toggled">
+                        <span class="form-value-static fg-input">W. van Breukelen</span>
+                    </div>
+                    <label class="fg-label">Naam</label>
+                </div>
+                <div class="form-group fg-float">
+                    <div class="fg-line">
+                        <input type="email" id="question-email"  class="form-control fg-input" name="question-email" placeholder="emailadres@domein.nl" value="">
+                    </div>
+                    <label class="fg-label" for="question-email">E-mailadres</label>
+                </div>
+                <div class="form-group fg-float">
+                    <div class="fg-line">
+                        <input type="tel" id="question-phone" class="form-control fg-input" name="question-phone" placeholder="012 345 67 89" value="">
+                    </div>
+                    <label class="fg-label" for="question-phone">Telefoonnummer</label>
+                </div>
+                <div class="form-group form-footer text-center">
+                    <button type="button" class="btn-submit btn-grayed btn-back">Vorige</button>
+                    <button type="submit" class="btn-submit btn-brand">Verzenden</button>
+                </div>
+            </form>
+        </ons-page>
+        <ons-page class="bg-gray" id="contact-vestiging" ng-class="{hidden: section!='vestiging'}">
+            <div class="flavor">&nbsp;</div>
+            <div class="ui-content ui-block bg-white">
+                <h3 class="fg-brand">Rabobank Leiden</h3>
+            </div>
+        </ons-page>
+    </div>
+</ons-navigator>
