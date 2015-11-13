@@ -190,7 +190,7 @@ p {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: $bg-orange url(../svg.php?stroke=FFFFFF&file=icoon-klantworden.svg) no-repeat center;
+      background: $bg-orange url(../img/icoon-klantworden-wit.svg) no-repeat center;
       background-size: 22px;
     }
   }
@@ -485,7 +485,7 @@ p {
   box-shadow: 0 5px 5px rgba(0,0,0,0.4);
   .ui-icon {
     display: block;
-    background-image: url(../svg.php?stroke=FFFFFF&file=icoon-betalen-ontvangen.svg);
+    background-image: url(../img/icoon-betalen-ontvangen-wit.svg);
     background-size: contain;
     float: none;
     height: 30px;
@@ -659,7 +659,7 @@ p {
     cursor: not-allowed;
 
     .icon-person-add {
-      background-image: url(../svg.php?stroke=FFFFFF&file=icoon-klantworden.svg);
+      background-image: url(../img/icoon-klantworden-wit.svg);
       background-size: 2em;
       display: block;
       height: 2em;
