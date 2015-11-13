@@ -45,7 +45,7 @@ var raboControllers = angular.module('raboControllers', [])
 var raboApp = ons.bootstrap('raboApp', ['onsen', 'ngRoute', 'raboControllers'])
     .service('appDataService', function ($http, $rootScope) {
         appData = null;
-        var promise = $http.get("/app/appdata.json").success(function (data) {
+        var promise = $http.get("appdata.json").success(function (data) {
             appData = data;
             $rootScope.processData()
         });

@@ -92,6 +92,6 @@ AddCharset UTF-8 .html
 </IfModule>
 
 RewriteEngine On
-RewriteBase /app/
+RewriteBase /rabobank-app/app/
 
 RewriteRule ^svg/([0-9A-F]+/)?([^/]*)(\.svg)?$ /svg.php?file=$2&stroke=$1 [L]

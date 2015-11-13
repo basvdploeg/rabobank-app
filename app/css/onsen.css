@@ -108,7 +108,7 @@ p {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #FF7918 url(/app/svg/FFFFFF/icoon-klantworden.svg) no-repeat center;
+    background: #FF7918 url(../svg.php?stroke=FFFFFF&file=icoon-klantworden.svg) no-repeat center;
     background-size: 22px; }
 #rabo-menu .notification {
   float: right;
@@ -332,7 +332,7 @@ p {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); }
   .btn-new-transfer .ui-icon {
     display: block;
-    background-image: url(/app/svg/FFFFFF/icoon-betalen-ontvangen.svg);
+    background-image: url(../svg.php??stroke=FFFFFF&file=icoon-betalen-ontvangen.svg);
     background-size: contain;
     float: none;
     height: 30px;
@@ -462,7 +462,7 @@ p {
     width: 3em;
     cursor: not-allowed; }
     #login-ui #person-add .icon-person-add {
-      background-image: url(/app/svg/FFFFFF/icoon-klantworden.svg);
+      background-image: url(../svg.php??stroke=FFFFFF&file=icoon-klantworden.svg);
       background-size: 2em;
       display: block;
       height: 2em;
