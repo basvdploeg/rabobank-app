@@ -236,7 +236,7 @@
         "1": {
             "id": 1,
             "title": "De zin en onzin van beleggen",
-            "image": "/img/story-beleggen.jpg",
+            "image": "img/story-beleggen.jpg",
             "date": "2015-10-22",
             "location": "Utrecht",
             "content": [
@@ -248,7 +248,7 @@
         "2": {
             "id": 2,
             "title": "Stuur uw bankpas niet op",
-            "image": "/img/story-bankpas.png",
+            "image": "img/story-bankpas.png",
             "date": "2015-10-21",
             "location": "Utrecht",
             "content": [
@@ -262,7 +262,7 @@
         "3": {
             "id": 3,
             "title": "Nieuw hypotheektarief",
-            "image": "/img/story-hypotheektarief.jpg",
+            "image": "img/story-hypotheektarief.jpg",
             "date": "2015-10-09",
             "location": "Utrecht",
             "content": [
@@ -276,7 +276,7 @@
         "4": {
             "id": 4,
             "title": "Prinsjesdag 2015: Gevolgen voor u en uw portemonnee",
-            "image": "/img/story-prinsjesdag.jpg",
+            "image": "img/story-prinsjesdag.jpg",
             "date": "2015-09-16",
             "location": "Utrecht",
             "content": [
